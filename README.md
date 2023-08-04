@@ -12,13 +12,13 @@
 > READ THE GUIDELINES BELLOW CAREFULLY, PAYING PARTICULAR ATTENTION TO THE "features" IN THE [[REQUIREMENT DETAILS](https://github.com/chainapsis/keplr-chain-registry#requirement-details)].
 
 
-# Guidelines for Community-Driven Suggest Chain Integration
+# Guidelines for Non-Native Chain Integration 
 
 Keplr team has always been at the leading edge of building secure and interoperable wallet infrastructure for the blooming cross-chain networks, placing its core mainly at the Cosmos ecosystem.
 
 To help the builders easily plug into Keplr’s wide userbase and the ever-growing Cosmos ecosystem, Keplr has been offering an option of permissionless integration, the so-called “Suggest Chain Integration”. The feature has enabled front-ends to request adding new Cosmos-SDK-based blockchains that aren’t natively integrated into the Keplr extension.
 
-Keplr team is now introducing a Community-Driven Integration, which enables our users to easily make a request for adding new chains and updating their information. It's an expanded version of the previous suggest chain integration, providing a public API to our users for creating and updating a set integration standard for each chain.
+Keplr team is now introducing a Community-Driven Integration, which enables our users to easily make a request for adding new non-native chains and updating their information. It's an expanded version of the previous suggest chain integration, providing a public API to our users for creating and updating a set integration standard for each chain.
 
 To make a pull request, please carefully read and follow the guideline below. Any contribution is more than welcome!
 
@@ -130,7 +130,7 @@ Here’s an overview of the structure of the directory. Please provide the infor
     - name: name of the node provider
     - email: email address of the node provider (To help other users reach out when there is an  issue with the nodes’ status)
     - website(optional): website address of the node provider
-- walletUrlForStaking(optional): the URL where the users are directed when they click on Staking button of the Keplr Wallet
+- walletUrlForStaking(optional): the URL where the users are directed when they click on the Staking button of the Keplr Wallet
 - bip44: BIP-44 coin type (118 highly recommended)
 - bech32Config: prefix used at the beginning of the address
 - currencies: the list of the supported currencies
@@ -146,12 +146,12 @@ Here’s an overview of the structure of the directory. Please provide the infor
 
 ## NOTE:
 
-- please check if the chain information file is in JSON format.
+- please submit the chain information file in JSON format.
 - Chain logos should be in PNG format in 256x256px resolution. Please also note that the images will be automatically cropped into a circle to be displayed on the wallet (See the sample image above)
 - RPC
     - Please check if the RPC node is not currently experiencing any issues/errors.
     - Please double-check if your chainId matches the RPC node’s chainId.
-    - Check if websocket connection is open.
+    - Make sure that websocket connection is open.
 - REST
     - Please check if the REST node is not currently experiencing any issues/errors.
     - Please double-check if your chainId matches the REST node’s chainId.
